@@ -8,34 +8,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a30e8f50bd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/styles/style.css">
-    <script src="assets/scripts/index.js" defer></script>
+    <!-- <script src="assets/scripts/index.js" defer></script> -->
 </head>
 <body>
-    <section>
-        <div class="container">
+    <main class="app">
+        <progress id="js-progress" value="0"></progress>
+        <div class="progress-bar"></div>
+        <div class="container" id="js-mode-buttons">
             <h1>Pomodoro</h1>
 
-            <div class="painel">
-                <p id="work">Work</p>
-                <p id="break">break</p>
+            <div class="panel">
+                <button data-mode="pomodoro" class="button active mode-button ring-color-pomodoro" id="js-pomodoro">
+                    Pomodoro
+                </button>
+                <button data-mode="shortBreak" class="button  mode-button" id="js-short-break">
+                    Short Break
+                </button>
+                <button data-mode="longBreak" class="button  mode-button" id="js-long-break">
+                    Long Break
+                </button>
+                <!-- <p id="work">Work</p>
+                <p id="break">break</p> -->
             </div>
 
-            <div class="timer">
+            <div class="timer clock" id="js-clock">
                 <div class="circle">
                     <div class="time">
-                        <p id="minutes"></p>
-                        <p>:</p>
-                        <p id="seconds"></p>
+                        <p id="js-minutes">25</p>
+                        <p class="seperator">:</p>
+                        <p id="js-seconds">00</p>
                     </div>
                 </div>
             </div>
 
             <div class="controls">
-                <button id="start" onclick="start()"><i class="fa-solid fa-play"></i></button>
-
-                <a href="/" id="reset"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+                <button id="js-btn"  class="main-button" data-action="start">
+                    Start
+                </button>
             </div> 
         </div>
-    </section>
+    </main>
+    <div class="hidden">
+        <audio src="./assets/audio/break.mp3" data-sound="shortBreak"></audio>
+        <audio src="./assets/audio/break.mp3" data-sound="longBreak"></audio>
+    </div>
+    <script src="./assets/scripts/main.js"></script>
 </body>
 </html>

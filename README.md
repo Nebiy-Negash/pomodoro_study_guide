@@ -1,5 +1,9 @@
-# pomodoro_study_guide
+# pomodoro
 
-### a **pomodoro** web app that counts down from 25 minutes and 5 minutes break
+A simple and clean pomodoro web app.
+with a progress bar at the top.
+three sessions the user can choose from.
+**pomodoro** **short break** and **long break**
 
-![screenshoot of the web app] (/assets/images/Screenshot 2022-12-11 at 2.39.12 PM.png)
+    ![screenShot image](/assets/images/SS_image.png)
+    ![progress image](/assets/images/Progres_image.png)
